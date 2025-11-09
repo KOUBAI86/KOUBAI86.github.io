@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 8.1.1">
+
+  
+
+  
+
+  
+    <meta name="author" content="KOUBAI86">
+  
+
+  
+
+  
+
+  <title>如何创建博客 | KOUBAI86</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(/img/bg.png)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          KOUBAI86
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a href="/archives">归档</a></li>
+        
+          <li class="navbar-list-item"><a href="/links">友链</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
+        
+          <li class="navbar-list-item"><a href="/categories">分类</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">如何创建博客</h1>
+          <h2 class="title-sub-wrap">
+            <strong>KOUBAI86</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2025-10-26T07:00:00.000Z" itemprop="datePublished">2025-10-26</time>
+          </h2>
+          
+          
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">📒 技术笔记</a></li>
+    
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/Hexo/">🏷️ Hexo</a></li>
+  
+    <li><a href="/tags/Markdown/">🏷️ Markdown</a></li>
+  
+    <li><a href="/tags/github/">🏷️ github</a></li>
+  
+    <li><a href="/tags/git/">🏷️ git</a></li>
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="Hexo-Git搭建博客"><a href="#Hexo-Git搭建博客" class="headerlink" title="Hexo+Git搭建博客"></a>Hexo+Git搭建博客</h1><h2 id="一、准备工具：Node-js-Git-GitHub仓库（基础支撑）"><a href="#一、准备工具：Node-js-Git-GitHub仓库（基础支撑）" class="headerlink" title="一、准备工具：Node.js + Git + GitHub仓库（基础支撑）"></a>一、准备工具：Node.js + Git + GitHub仓库（基础支撑）</h2><h3 id="1-安装Node-js（Hexo依赖）和Git；"><a href="#1-安装Node-js（Hexo依赖）和Git；" class="headerlink" title="1. 安装Node.js（Hexo依赖）和Git；"></a>1. 安装Node.js（Hexo依赖）和Git；</h3><p>​官网下载即可</p>
+<h3 id="2-注册GitHub账号，创建一个名为-你的用户名-github-io-的仓库（仓库名必须严格一致）。"><a href="#2-注册GitHub账号，创建一个名为-你的用户名-github-io-的仓库（仓库名必须严格一致）。" class="headerlink" title="2. 注册GitHub账号，创建一个名为 你的用户名.github.io 的仓库（仓库名必须严格一致）。"></a>2. 注册GitHub账号，创建一个名为 你的用户名.github.io 的仓库（仓库名必须严格一致）。</h3><p> 安装Node.js的意义</p>
+<ul>
+<li>Hexo是基于Node.js开发的工具，依赖Node.js的“包管理系统（npm）”来安装、运行。没有Node.js，就无法执行 npm install 等命令，相当于“没有发动机，汽车无法启动”。</li>
+</ul>
+<p> 安装Git的意义</p>
+<ul>
+<li>Git是“版本控制工具”，后续部署博客时，需要用Git把本地生成的博客文件（HTML&#x2F;CSS等）推送到GitHub仓库，相当于“把本地文件传到网上的传输工具”。</li>
+</ul>
+<p> 创建GitHub仓库（ 你的用户名.github.io ）的意义</p>
+<ul>
+<li>GitHub提供“GitHub Pages”服务：只要仓库名严格是 用户名.github.io ，GitHub会自动把仓库里的静态文件（HTML&#x2F;CSS）解析成可访问的网页，相当于“给你的博客提供免费的线上服务器”。</li>
+</ul>
+<h2 id="二、本地搭建Hexo博客"><a href="#二、本地搭建Hexo博客" class="headerlink" title="二、本地搭建Hexo博客"></a>二、本地搭建Hexo博客</h2><h3 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1. 安装hexo"></a>1. 安装hexo</h3><p>打开git，执行：<br><code>npm install -g hexo-cli</code></p>
+<h3 id="2-初始化博客"><a href="#2-初始化博客" class="headerlink" title="2. 初始化博客"></a>2. 初始化博客</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog  # 创建名为myblog的博客目录</span><br><span class="line">cd myblog         # 进入目录</span><br><span class="line">npm install       # 安装依赖</span><br></pre></td></tr></table></figure>
+<h3 id="3-本地预览"><a href="#3-本地预览" class="headerlink" title="3. 本地预览"></a>3. 本地预览</h3><p><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code><br>浏览器访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> ，即可看到默认博客页面。<br> <strong>安装Hexo： npm install -g hexo-cli</strong></p>
+<ul>
+<li>代码意义：<br>​</li>
+<li> npm ：Node.js自带的“包管理器”，用于安装&#x2F;卸载网上的工具包；<br>​</li>
+<li> install -g ： -g 是“全局安装”，表示把 hexo-cli （Hexo的命令行工具）装在电脑全局，任何目录都能调用 hexo 命令；<br>​</li>
+<li> hexo-cli ：Hexo的“命令行工具”，有了它才能执行 hexo init 、 hexo s 等操作。<br>​</li>
+<li>步骤意义：相当于“在电脑上装一个‘博客生成器’，后续用它来创建博客工程”。<br> 初始化博客： hexo init myblog  +  cd myblog</li>
+</ul>
+<p> </p>
+<p><strong>hexo init myblog 代码意义：</strong><br>​</p>
+<ul>
+<li> hexo init ：Hexo的“初始化命令”，会自动创建一个名为 myblog 的文件夹，并在里面生成博客的基础结构（如 source （存文章）、 themes （存主题）、 _config.yml （配置文件）等），相当于“自动搭建好博客的‘毛坯房框架’”。</li>
+</ul>
+<p>​<strong>cd myblog 代码意义：</strong><br>​</p>
+<ul>
+<li><p> cd 是“切换目录”命令，进入 myblog 文件夹后，才能执行后续的 npm install 、 hexo s 等命令（因为这些命令需要在博客工程目录内运行）。<br>​</p>
+</li>
+<li><p>步骤意义：创建博客的“本地工程文件夹”，并进入工程目录准备后续操作。<br><strong>安装依赖： npm install</strong><br>​</p>
+</li>
+<li><p>Hexo初始化后， myblog 文件夹里有个 package.json 文件，里面记录了博客运行需要的“依赖包”（如处理Markdown的包、生成HTML的包）；<br>​</p>
+</li>
+<li><p> npm install 会自动读取 package.json ，下载并安装所有依赖包，相当于“给毛坯房装水电、门窗，让房子能正常使用”。<br>​</p>
+</li>
+<li><p>步骤意义：补全博客运行需要的“基础功能模块”，没有这一步， hexo s （启动本地服务）会报错。<br>本地预览： hexo clean &amp;&amp; hexo g &amp;&amp; hexo s </p>
+</li>
+<li><p>这是3个命令的“合并写法”（ &amp;&amp; 表示“前一个命令成功后，执行下一个”），分开解释更清晰：</p>
+</li>
+</ul>
+<p><strong>hexo clean</strong> </p>
+<ul>
+<li>代码意义：清理Hexo之前生成的“临时文件”（如 public 文件夹里的旧HTML），避免旧文件干扰新内容的预览。<br>​</li>
+<li>步骤意义：相当于“预览前先清空缓存，确保看到的是最新的博客效果”。</li>
+</ul>
+<p><strong>hexo g （ g 是 generate 生成的缩写）</strong></p>
+<ul>
+<li>代码意义：<br>​</li>
+<li>读取 source&#x2F;_posts 里的Markdown文章，结合 themes 里的主题样式，自动生成对应的静态文件（HTML&#x2F;CSS&#x2F;JS），并放在 public 文件夹里；<br>​</li>
+<li>比如你用Markdown写的 # 我的第一篇文章 ，会被转换成h1的HTML标签，且带上主题的样式。<br>​</li>
+<li>步骤意义：把“易写的Markdown”转换成“能在浏览器显示的HTML”，相当于“把你写的文字稿，排版成能看的网页”。</li>
+</ul>
+<p><strong>hexo s （ s 是 server 的缩写）</strong></p>
+<ul>
+<li>代码意义：在本地启动一个“临时服务器”，默认端口是4000，浏览器访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 就能看到 public 文件夹里的网页。<br>​</li>
+<li>步骤意义：相当于“在本地开一个‘预览窗口’，不用上传到网上，就能先看博客的效果是否符合预期”。</li>
+</ul>
+<h2 id="三、关联GitHub并部署-把本地博客传到网上，让别人能访问"><a href="#三、关联GitHub并部署-把本地博客传到网上，让别人能访问" class="headerlink" title="三、关联GitHub并部署(把本地博客传到网上，让别人能访问)"></a>三、关联GitHub并部署(把本地博客传到网上，让别人能访问)</h2><h3 id="1-修改hexo配置"><a href="#1-修改hexo配置" class="headerlink" title="1. 修改hexo配置"></a>1. 修改hexo配置</h3><p>打开博客目录下的 _config.yml ，找到 deploy 项，修改为：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git        # 部署方式：用Git工具推送</span><br><span class="line">  repo: https:<span class="comment">//github.com/你的用户名/你的用户名.github.io.git  # 推送到哪个GitHub仓库</span></span><br><span class="line">  branch: main     # 推送到仓库的哪个分支（GitHub默认分支是main，老账号可能是master）</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装部署插件"><a href="#2-安装部署插件" class="headerlink" title="2. 安装部署插件"></a>2. 安装部署插件</h3><p><code>npm install hexo-deployer-git --save</code></p>
+<h3 id="3-部署到GitHub-Pages"><a href="#3-部署到GitHub-Pages" class="headerlink" title="3. 部署到GitHub Pages"></a>3. 部署到GitHub Pages</h3><p><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+<ul>
+<li><p>代码意义：<br>​</p>
+</li>
+<li><p>Hexo默认没有“用Git部署”的功能，需要安装专门的插件 hexo-deployer-git ；<br>​</p>
+</li>
+<li><p> –save ：表示把这个插件添加到 package.json 的依赖列表里，后续重新安装依赖时会自动包含它。<br>​</p>
+</li>
+<li><p>步骤意义：给Hexo装一个“Git传输插件”，让它能调用Git把文件推送到GitHub。<br> 部署到GitHub： hexo clean &amp;&amp; hexo g &amp;&amp; hexo d </p>
+</li>
+<li><p>前两个命令（ hexo clean 、 hexo g ）和“本地预览”一致，重点看第三个命令 hexo d （ d 是 deploy 的缩写）：<br>​</p>
+</li>
+<li><p> hexo d 代码意义：读取 _config.yml 里的 deploy 配置，用Git把 public 文件夹里的所有静态文件（HTML&#x2F;CSS&#x2F;JS）推送到指定的GitHub仓库分支。<br>​</p>
+</li>
+<li><p>步骤意义：相当于“把本地预览好的博客文件，正式传到GitHub的‘服务器’上，别人通过 https:&#x2F;&#x2F;你的用户名.github.io 就能访问”。</p>
+</li>
+</ul>
+<h2 id="四、后续操作（日常维护博客）"><a href="#四、后续操作（日常维护博客）" class="headerlink" title="四、后续操作（日常维护博客）"></a>四、后续操作（日常维护博客）</h2><p><strong>1. 写文章：在 source&#x2F;_posts 新建Markdown文件</strong></p>
+<ul>
+<li>意义： source&#x2F;_posts 是Hexo约定的“文章存放目录”，只要把Markdown文章放这里，执行 hexo g 时就会自动生成对应的HTML页面，不用手动写HTML，相当于“把文章稿放进‘投稿箱’，系统自动排版发布”。</li>
+</ul>
+<p><strong>2. 换主题：下载主题到 themes 目录 + 修改 _config.yml 的 theme 项</strong></p>
+<ul>
+<li>意义： themes 是“主题存放目录”，修改 theme: 主题名 后， hexo g 会用新主题的样式生成页面，相当于“给博客换一套‘皮肤’，不用重新写所有样式代码”。</li>
+</ul>
+<p><strong>3. 更新博客：重新执行 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d </code></strong></p>
+<ul>
+<li>意义：每次修改文章&#x2F;主题后，需要重新清理旧文件、生成新HTML、推送到GitHub，相当于“把更新后的内容重新传到网上，确保别人看到的是最新版本”。</li>
+</ul>
+<h2 id="五、一些常见问题"><a href="#五、一些常见问题" class="headerlink" title="五、一些常见问题"></a>五、一些常见问题</h2><h3 id="1-Git未配置用户身份信息（用户名和邮箱），导致部署时无法提交代码。解决步骤如下"><a href="#1-Git未配置用户身份信息（用户名和邮箱），导致部署时无法提交代码。解决步骤如下" class="headerlink" title="1. Git未配置用户身份信息（用户名和邮箱），导致部署时无法提交代码。解决步骤如下:"></a>1. Git未配置用户身份信息（用户名和邮箱），导致部署时无法提交代码。解决步骤如下:</h3><p> <strong>配置Git全局身份</strong><br>在终端中执行以下命令（替换为你的GitHub账号邮箱和用户名）：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&quot;你的GitHub注册邮箱&quot;</span></span><br><span class="line">git config --global user.name <span class="string">&quot;你的GitHub用户名&quot;</span></span><br></pre></td></tr></table></figure>
+<p><strong>重新执行部署命令</strong><br><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+<h3 id="2-创建博客文章"><a href="#2-创建博客文章" class="headerlink" title="2. 创建博客文章"></a>2. 创建博客文章</h3><p>创建Markdown（.md）文件<br><strong>使用命令创建</strong><br>进入到Hexo博客的根目录（即包含 _config.yml 文件的目录），然后执行以下命令：<br><code>hexo new &quot;文章标题&quot;</code><br>执行成功后，会在 source&#x2F;_posts 目录下自动生成一个以文章标题命名的 .md 文件，并且文件中会自动添加Hexo的Front - matter部分。<br><strong>手动创建</strong><br>Windows系统：可以直接在文件资源管理器中，找到Hexo博客的 source&#x2F;_posts 目录，然后右键单击空白处，选择“新建”→“文本文档”，建好之后，点击“查看”选项卡，勾选“文件扩展名”，使文件后缀名可见。选择要修改的.txt文件，右键点击文件，选择“重命名”，直接将文件后缀名从.txt改为.md，然后按下Enter键确认修改。</p>
+<h3 id="3-怎么查看博客"><a href="#3-怎么查看博客" class="headerlink" title="3. 怎么查看博客"></a>3. 怎么查看博客</h3><p>查看博客分为本地预览和线上访问两种场景，对应操作如下：</p>
+<p><strong>（一）本地预览（电脑上看效果，不用联网）</strong></p>
+<p>在博客根目录的终端执行：<br><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code><br>执行成功后，终端会提示“Server is running at <a href="http://localhost:4000”，此时打开浏览器，输入">http://localhost:4000”，此时打开浏览器，输入</a> <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 即可查看本地博客的效果。</p>
+<p><strong>（二）线上访问（部署后，别人也能通过网络访问）</strong></p>
+<p>当你执行 hexo d （部署）成功后，打开浏览器，输入你的GitHub Pages地址（格式为 https:&#x2F;&#x2F;你的GitHub用户名.github.io ），例如你的地址是 <a target="_blank" rel="noopener" href="https://koubai86.github.io/">https://KOUBAI86.github.io</a> ，直接在浏览器输入该网址即可访问线上博客。<br>如果线上访问失败，可检查：</p>
+<p>1. 部署是否成功（终端无报错）；<br>2. GitHub仓库名是否为 用户名.github.io （必须严格一致）；<br>3. 浏览器缓存问题（按 Ctrl+F5 强制刷新）。<br>​</p>
+<h3 id="4-config-yml中deploy配置问题"><a href="#4-config-yml中deploy配置问题" class="headerlink" title="4. config.yml中deploy配置问题"></a>4. config.yml中deploy配置问题</h3><p>由于YAML对缩进极其敏感，问题一般出现在缩进上</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/你的用户名/你的用户名.github.io.git</span></span><br><span class="line">  branch: main  </span><br></pre></td></tr></table></figure>
+<p>YAML语法要求冒号后面必须有空格，且缩进一致，两个空格缩进（用空格，不能用制表符）</p>
+<p><strong>加粗文本</strong><br><em>斜体文本</em><br><code>代码片段</code></p>
+<blockquote>
+<p>引用内容<br>可以换行</p>
+</blockquote>
+
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2025/10/26/git%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">git的使用</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="/img/my avatar.jpg" class="soft-size--round soft-style--box" alt="KOUBAI86">
+    
+    
+      <h2>KOUBAI86</h2>
+    
+    
+      <p>贵在坚持</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>3</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        1
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        4
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>KOUBAI86</p>
+  </div>
+</section>
+
+
+      <section class="widget-categories widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+      <span>CATEGORIES</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categories-list">
+      
+        <li class="categories-list-item">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">
+            技术笔记 (2)
+          </a>
+        </li>
+        
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/tags/Hexo/" style="font-size: 10px;" class="tags-cloud-0">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;" class="tags-cloud-0">Markdown</a> <a href="/tags/git/" style="font-size: 10px;" class="tags-cloud-0">git</a> <a href="/tags/github/" style="font-size: 10px;" class="tags-cloud-0">github</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/KOUBAI86" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://twitter.com/guanquanhong" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2025 <a href="/" target="_blank">KOUBAI86</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  
+
+
+
+
+
+
+<!-- copy button  -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>
